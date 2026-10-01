@@ -1,0 +1,12 @@
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f4f6f9; color: #333; margin: 0; padding: 40px; }
+.container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+header { margin-bottom: 20px; }
+h1 { margin: 0; color: #111; }
+.subtitle { color: #666; font-size: 14px; }
+.status-banner { background: #e6f4ea; color: #137333; padding: 15px; border-radius: 6px; font-weight: bold; margin-bottom: 25px; text-align: center; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+th { background-color: #fafafa; font-weight: 600; color: #444; }
+.badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+.badge.green { background: #e6f4ea; color: #137333; }
+.badge.orange { background: #fef7e0; color: #b06000; }

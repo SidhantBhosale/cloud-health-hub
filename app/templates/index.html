@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Health & Incident Status Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>System Status Hub</h1>
+            <p class="subtitle">Live Infrastructure Telemetry & Monitoring</p>
+        </header>
+
+        <div class="status-banner operational">
+            <span>🟢 All Systems Normal (Staging Environment)</span>
+        </div>
+
+        <section class="services-list">
+            <h2>Core Cloud Services</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service Name</th>
+                        <th>Status</th>
+                        <th>Latency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for service in services %}
+                    <tr>
+                        <td><strong>{{ service.name }}</strong></td>
+                        <td><span class="badge {{ 'green' if service.status == 'Operational' else 'orange' }}">{{ service.status }}</span></td>
+                        <td>{{ service.latency }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
